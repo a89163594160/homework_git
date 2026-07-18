@@ -5,7 +5,6 @@ from selenium.webdriver.common.by import By
 def test_multiple_elements():
     driver = webdriver.Chrome()
     driver.get("https://httpbin.org/links/10")
-    driver.maximize_window()
 
     links = driver.find_elements(By.TAG_NAME, "a")
     assert len(links) == 9
